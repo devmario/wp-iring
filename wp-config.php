@@ -17,16 +17,16 @@ if (isset($_SERVER["HTTP_X_FORWARDED_PROTO"]) && $_SERVER["HTTP_X_FORWARDED_PROT
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'c9');
+define('DB_NAME', "iring");
 
 /** MySQL database username */
-define('DB_USER', getenv('C9_USER'));
+define('DB_USER', "root");
 
 /** MySQL database password */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', "chief0401");
 
 /** MySQL hostname */
-define('DB_HOST', getenv('IP'));
+define('DB_HOST', "localhost");//"139.162.17.143");
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -70,8 +70,8 @@ $table_prefix  = 'wp_';
  * in their development environments.
  */
 define('WP_DEBUG', false);
-$_SERVER["HTTP_HOST"] = $_SERVER["SERVER_NAME"];
-$_SERVER["HTTP_HOST"] = $_SERVER["SERVER_NAME"];
+#$_SERVER["HTTP_HOST"] = $_SERVER["SERVER_NAME"];
+#$_SERVER["HTTP_HOST"] = $_SERVER["SERVER_NAME"];
 
 /* That's all, stop editing! Happy blogging. */
 
@@ -81,3 +81,5 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
+define('FS_METHOD', 'direct');
